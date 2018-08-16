@@ -9,6 +9,7 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
 }
 
 .topnav {
@@ -61,44 +62,72 @@ body {
     text-align: left;
   }
 }
+#myVideo {
+    margin: 0 auto;
+    width: 450px;
+    margin-left:40px;
+    border-radius:100%
+}
+#container {
+    margin-right:80px;
+    padding: 20px;
+}
+
+.mainp {
+  display: flex;
+  float: left;
+  justify-content: center;
+  /*align-items: center;*/
+}
+
+.mainp section {
+  width: 100%;
+  /*height: 100%;*/
+}
 </style>
 </head>
 <body>
+  <div class="topnav" id="myTopnav">
+    <a href="#home" class="active">Home</a>
+    <a href="#news">Projects</a>
+    <a href="#contact">Outreach</a>
+    <a href="resume/ShikhaAgarwal.pdf" target="_blank">Resume</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
 
-<div class="topnav" id="myTopnav">
-  <a href="#home" class="active">Home</a>
-  <a href="#news">Projects</a>
-  <a href="#contact">Outreach</a>
-  <a href="resume/ShikhaAgarwal.pdf" target="_blank">Resume</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
+  <script>
+  function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+          x.className += " responsive";
+      } else {
+          x.className = "topnav";
+      }
+  }
+  </script>
 
-<script>
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
-</script>
+  <br/>
 
   <h2 style = "color:#000000; font-family:'Sofia'; font-size:30px; margin-left:60px;">Shikha Agarwal</h2>
-  <hr class="hor-line">
+  <hr class="hor-line"/>
 
-  <div id="container" style="width:900px; margin-left:180px;">
-    <div id="texts" style="display:inline;"> 
-        <a href="/images/ShikhaAgarwal.jpg"><img src="/images/ShikhaAgarwal.jpg" style="width:230px; float:left; margin-right:40px; border-radius:50%"></a>
-        <!--<a href="/images/ShikhaAgarwal.jpg"><img src="/images/ShikhaAgarwal.jpg" style="width:160px; float:left; margin-right:40px; border-radius:50%"></a>-->
-        <div style="display:inline;">
-          <p align="justify"> I am a second year masters student pursuing <a href="https://www.cics.umass.edu/" class="link-between-text">Computer Science</a> at the <a href="https://www.umass.edu/" class="link-between-text">University of Massachusetts Amherst</a> (Expected graduation: May 2019). I am working on a research project with Professor <a href="https://people.cs.umass.edu/~mccallum/" class="link-between-text">Andrew McCallum</a> and CZI team in solving entity recognition and entity linking jointly for biomedical papers. In the summer 2018, I worked as an intern with the Research and Development team at Lexalytics, where I focused on extracting meaningful keywords given a keyword (or a product) from the unstructured text reviews. I have also worked as a Software Developer with Gwynniebee, a subscription-based online clothing rental service. 
+  <main class="mainp">
+    <section class='left section'>
+      <video autoplay muted loop id="myVideo">
+        <source src="images/SA.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+      </video> 
+    </section>
+    <section class='right section'>
+      <div id="container">
+          <p align="justify"> I am a second year masters student pursuing <a href="https://www.cics.umass.edu/" class="link-between-text">Computer Science</a> at the <a href="https://www.umass.edu/" class="link-between-text">University of Massachusetts Amherst</a> (Expected graduation: May 2019). I am working on a research project with Professor <a href="https://people.cs.umass.edu/~mccallum/" class="link-between-text">Andrew McCallum</a> and CZI team in solving entity recognition and entity linking jointly for biomedical papers. In the summer 2018, I worked as an intern with the Research and Development team at Lexalytics, where I focused on extracting meaningful keywords given a keyword (or a product) from the unstructured text reviews. I have also worked as a Software Developer with Gwynniebee, a subscription-based online clothing rental service.
+          </p>
+      </div>
+    </section>
+  </main>
 
-        </div>
-
-    </div>
 
 
 </body>
